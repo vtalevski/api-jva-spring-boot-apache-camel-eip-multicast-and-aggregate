@@ -1,0 +1,70 @@
+{
+  "scientistResult": {
+    "firstName": "Albert",
+    "lastName": "Einstein",
+    "birthYear": 1879,
+    "deathYear": 1955,
+    "birthCountry": "Germany",
+    "deathCountry": "United States",
+    "wives": [
+      {
+        "firstName": "Mileva",
+        "lastName": "Maric",
+        "birthYear": 1875,
+        "deathYear": 1948,
+        "birthCountry": "Serbia",
+        "deathCountry": "Switzerland",
+        "children": [
+          {
+            "firstName": "Lieserl",
+            "lastName": "Einstein",
+            "birthYear": 1902,
+            "deathYear": null,
+            "birthCountry": "Serbia",
+            "deathCountry": null
+          },
+          {
+            "firstName": "Hans",
+            "lastName": "Einstein",
+            "birthYear": 1904,
+            "deathYear": 1973,
+            "birthCountry": "United States",
+            "deathCountry": "United States"
+          },
+          {
+            "firstName": "Eduard",
+            "lastName": "Einstein",
+            "birthYear": 1910,
+            "deathYear": 1965,
+            "birthCountry": "Switzerland",
+            "deathCountry": "Switzerland"
+          }
+        ]
+      },
+      {
+        "firstName": "Elsa",
+        "lastName": "Lowenthal",
+        "birthYear": 1876,
+        "deathYear": 1936,
+        "birthCountry": "Germany",
+        "deathCountry": "United States",
+        "children": []
+      }
+    ],
+    "educationList": [
+      {
+        "universityName": "University of Zurich",
+        "graduationYear": 1905
+      }
+    ],
+    "knownFor": [
+      "General relativity",
+      "Special relativity",
+      "Photoelectric effect",
+      "Mass - energy equivalence",
+      "Planck - Einstein relation",
+      "Theory of Brownian motion"
+    ]
+  },
+  "scientistErrors": null
+}

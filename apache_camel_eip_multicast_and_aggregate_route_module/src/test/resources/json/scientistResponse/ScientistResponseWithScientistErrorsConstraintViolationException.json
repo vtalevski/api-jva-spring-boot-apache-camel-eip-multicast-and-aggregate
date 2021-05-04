@@ -1,0 +1,13 @@
+{
+  "scientistResult": null,
+  "scientistErrors": [
+    {
+      "errorCode": "INTERNAL_API_BAD_REQUEST",
+      "errorMessage": "Validation error! The first name must start with an upper case letter."
+    },
+    {
+      "errorCode": "INTERNAL_API_BAD_REQUEST",
+      "errorMessage": "Validation error! The last name must start with an upper case letter."
+    }
+  ]
+}

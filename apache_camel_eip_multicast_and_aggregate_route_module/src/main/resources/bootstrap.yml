@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api-jva-spring-boot-apache-camel-eip-multicast-and-aggregate-route
+
+logging:
+  level:
+    root: info
+
+route:
+  start:
+    endpoint: direct:startOrchestrationRoute
+    id: StartOrchestrationRoute
+  scientist:
+    personalLife:
+      endpoint: direct:personalLifeEnrichmentRoute
+      id: PersonalLifeEnrichmentRoute
+      uri: http://localhost:8081/api-jva-scientist-personal-life/scientist-personal-life
+    professionalLife:
+      endpoint: direct:professionalLifeEnrichmentRoute
+      id: ProfessionalLifeEnrichmentRoute
+      uri: http://localhost:8082/api-jva-scientist-professional-life/scientist-professional-life

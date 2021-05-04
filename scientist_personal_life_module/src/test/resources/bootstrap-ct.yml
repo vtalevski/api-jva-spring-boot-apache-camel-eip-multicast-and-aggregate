@@ -1,0 +1,3 @@
+embedded:
+  postgresql:
+    port: 5432

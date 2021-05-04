@@ -1,0 +1,63 @@
+{
+  "scientistResult": {
+    "firstName": "Albert",
+    "lastName": "Einstein",
+    "birthYear": 1879,
+    "deathYear": 1955,
+    "birthCountry": "Germany",
+    "deathCountry": "United States",
+    "wives": [
+      {
+        "firstName": "Mileva",
+        "lastName": "Maric",
+        "birthYear": 1875,
+        "deathYear": 1948,
+        "birthCountry": "Serbia",
+        "deathCountry": "Switzerland",
+        "children": [
+          {
+            "firstName": "Lieserl",
+            "lastName": "Einstein",
+            "birthYear": 1902,
+            "deathYear": null,
+            "birthCountry": "Serbia",
+            "deathCountry": null
+          },
+          {
+            "firstName": "Hans",
+            "lastName": "Einstein",
+            "birthYear": 1904,
+            "deathYear": 1973,
+            "birthCountry": "United States",
+            "deathCountry": "United States"
+          },
+          {
+            "firstName": "Eduard",
+            "lastName": "Einstein",
+            "birthYear": 1910,
+            "deathYear": 1965,
+            "birthCountry": "Switzerland",
+            "deathCountry": "Switzerland"
+          }
+        ]
+      },
+      {
+        "firstName": "Elsa",
+        "lastName": "Lowenthal",
+        "birthYear": 1876,
+        "deathYear": 1936,
+        "birthCountry": "Germany",
+        "deathCountry": "United States",
+        "children": []
+      }
+    ],
+    "educationList": null,
+    "knownFor": null
+  },
+  "scientistErrors": [
+    {
+      "errorCode": "EXTERNAL_API_NO_CONTENT",
+      "errorMessage": "No professional records found for particular scientist."
+    }
+  ]
+}

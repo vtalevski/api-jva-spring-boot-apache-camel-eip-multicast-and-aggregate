@@ -1,0 +1,21 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /api-jva-scientist-professional-life
+
+spring:
+  jpa:
+    database: postgresql
+    generate-ddl: true
+    properties:
+      hibernate:
+        dialect: com.talevski.viktor.configuration.ScientistProfessionalLifePostgreSQL94Dialect
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgresql_db
+    username: postgresql
+    password: postgresql
+
+logging:
+  level:
+    root: info

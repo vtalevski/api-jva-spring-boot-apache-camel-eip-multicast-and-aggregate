@@ -1,0 +1,8 @@
+route:
+  scientist:
+    personalLife:
+      mockEndpoint: mock:direct:personalLifeEnrichmentRoute
+      uri: mock:scientistPersonalLifeUri
+    professionalLife:
+      mockEndpoint: mock:direct:professionalLifeEnrichmentRoute
+      uri: mock:scientistProfessionalLifeUri

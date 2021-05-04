@@ -1,0 +1,6 @@
+{
+  "scientistProfessionalLifeResult": null,
+  "scientistProfessionalLifeError": {
+    "error": "No professional records found for particular scientist."
+  }
+}

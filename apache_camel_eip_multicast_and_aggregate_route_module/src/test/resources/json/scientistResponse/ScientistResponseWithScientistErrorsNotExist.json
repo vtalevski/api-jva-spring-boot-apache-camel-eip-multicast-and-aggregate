@@ -1,0 +1,23 @@
+{
+  "scientistResult": {
+    "firstName": "Michael",
+    "lastName": "Faraday",
+    "birthYear": null,
+    "deathYear": null,
+    "birthCountry": null,
+    "deathCountry": null,
+    "wives": null,
+    "educationList": null,
+    "knownFor": null
+  },
+  "scientistErrors": [
+    {
+      "errorCode": "EXTERNAL_API_NO_CONTENT",
+      "errorMessage": "No personal records found for particular scientist."
+    },
+    {
+      "errorCode": "EXTERNAL_API_NO_CONTENT",
+      "errorMessage": "No professional records found for particular scientist."
+    }
+  ]
+}

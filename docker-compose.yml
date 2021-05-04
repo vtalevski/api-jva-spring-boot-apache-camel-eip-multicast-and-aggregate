@@ -1,0 +1,92 @@
+version: '3'
+services:
+  postgresql_container:
+    image: postgres
+    container_name: postgresql_container
+    networks:
+      api-jva-spring-boot-apache-camel-eip-multicast-and-aggregate_network:
+        ipv4_address: 192.168.16.2
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgresql
+      POSTGRES_PASSWORD: postgresql
+      POSTGRES_DB: postgresql_db
+    volumes:
+      - postgresql_volume:/var/lib/postgresql/data
+
+  pgadmin_container:
+    depends_on:
+      - postgresql_container
+    image: dpage/pgadmin4
+    container_name: pgadmin_container
+    networks:
+      api-jva-spring-boot-apache-camel-eip-multicast-and-aggregate_network:
+        ipv4_address: 192.168.16.3
+    ports:
+      - 65535:65535
+    environment:
+      PGADMIN_DEFAULT_EMAIL: pgadmin
+      PGADMIN_DEFAULT_PASSWORD: pgadmin
+      PGADMIN_LISTEN_PORT: 65535
+
+  api-jva-spring-boot-scientist-personal-life-module:
+    depends_on:
+      - pgadmin_container
+    build: ./scientist_personal_life_module
+    image: api-jva-spring-boot-scientist-personal-life-module_image
+    container_name: api-jva-spring-boot-scientist-personal-life-module_container
+    networks:
+      api-jva-spring-boot-apache-camel-eip-multicast-and-aggregate_network:
+        ipv4_address: 192.168.16.4
+    ports:
+      - 8081:8081
+    environment:
+      spring.datasource.url: jdbc:postgresql://192.168.16.2:5432/postgresql_db
+    links:
+      - postgresql_container:postgresql_link
+
+  api-jva-spring-boot-scientist-professional-life-module:
+    depends_on:
+      - pgadmin_container
+    build: ./scientist_professional_life_module
+    image: api-jva-spring-boot-scientist-professional-life-module_image
+    container_name: api-jva-spring-boot-scientist-professional-life-module_container
+    networks:
+      api-jva-spring-boot-apache-camel-eip-multicast-and-aggregate_network:
+        ipv4_address: 192.168.16.5
+    ports:
+      - 8082:8082
+    environment:
+      spring.datasource.url: jdbc:postgresql://192.168.16.2:5432/postgresql_db
+    links:
+      - postgresql_container:postgresql_link
+
+  api-jva-spring-boot-apache-camel-eip-multicast-and-aggregate-route-module:
+    depends_on:
+      - api-jva-spring-boot-scientist-personal-life-module
+      - api-jva-spring-boot-scientist-professional-life-module
+    build: ./apache_camel_eip_multicast_and_aggregate_route_module
+    image: api-jva-spring-boot-apache-camel-eip-multicast-and-aggregate-route-module_image
+    container_name: api-jva-spring-boot-apache-camel-eip-multicast-and-aggregate-route-module_container
+    networks:
+      api-jva-spring-boot-apache-camel-eip-multicast-and-aggregate_network:
+        ipv4_address: 192.168.16.6
+    ports:
+      - 8080:8080
+    environment:
+      route.scientist.personalLife.uri: http://192.168.16.4:8081/api-jva-scientist-personal-life/scientist-personal-life
+      route.scientist.professionalLife.uri: http://192.168.16.5:8082/api-jva-scientist-professional-life/scientist-professional-life
+    links:
+      - postgresql_container:postgresql_link
+
+networks:
+  api-jva-spring-boot-apache-camel-eip-multicast-and-aggregate_network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.16.0/24
+
+volumes:
+  postgresql_volume:

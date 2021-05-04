@@ -1,0 +1,26 @@
+{
+  "scientistResult": {
+    "firstName": "Albert",
+    "lastName": "Einstein",
+    "educationList": [
+      {
+        "universityName": "University of Zurich",
+        "graduationYear": 1905
+      }
+    ],
+    "knownFor": [
+      "General relativity",
+      "Special relativity",
+      "Photoelectric effect",
+      "Mass - energy equivalence",
+      "Planck - Einstein relation",
+      "Theory of Brownian motion"
+    ]
+  },
+  "scientistErrors": [
+    {
+      "errorCode": "EXTERNAL_API_NO_CONTENT",
+      "errorMessage": "No personal records found for particular scientist."
+    }
+  ]
+}

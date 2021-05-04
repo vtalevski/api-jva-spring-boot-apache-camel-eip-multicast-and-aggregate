@@ -1,0 +1,6 @@
+# Folders to be ignored.
+/.idea
+target
+
+# Files to be ignored.
+*.iml

@@ -1,0 +1,52 @@
+[
+  {
+    "scientistFirstAndLastName": "Isaac Newton",
+    "scientistProfessionalLifeResult": {
+      "educationList": [
+        {
+          "universityName": "Trinity College",
+          "graduationYear": 1661
+        }
+      ],
+      "knownFor": [
+        "First Law of Motion",
+        "Second Law of Motion",
+        "Third Law of Motion"
+      ]
+    }
+  },
+  {
+    "scientistFirstAndLastName": "Nikola Tesla",
+    "scientistProfessionalLifeResult": {
+      "educationList": [
+        {
+          "universityName": "Graz University of Technology",
+          "graduationYear": null
+        }
+      ],
+      "knownFor": [
+        "AC Electrical System",
+        "Tesla Coil"
+      ]
+    }
+  },
+  {
+    "scientistFirstAndLastName": "Albert Einstein",
+    "scientistProfessionalLifeResult": {
+      "educationList": [
+        {
+          "universityName": "University of Zurich",
+          "graduationYear": 1905
+        }
+      ],
+      "knownFor": [
+        "General relativity",
+        "Special relativity",
+        "Photoelectric effect",
+        "Mass - energy equivalence",
+        "Planck - Einstein relation",
+        "Theory of Brownian motion"
+      ]
+    }
+  }
+]
